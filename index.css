@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.cell{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    font-size: 2em ;
+    border-radius: 8px;
+    box-shadow: 0 0px 10px 10px rgb(197, 195, 201);
+    
+}
+.board{
+    display: grid;
+    grid-template-columns: repeat(3,100px);
+    grid-template-rows: repeat(3,100px);
+    gap: 5px;
+     
+
+}
+button{
+    margin: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    z-index: 11;
+    cursor: pointer;
+    pointer-events: auto;
+    background-color: rgb(226, 226, 236);
+    border-radius: 10px;
+    border: none;
+
+}
+button:hover{
+    background-color: rgb(199, 198, 198);
+    box-shadow: 0 0px 10px 10px rgb(193, 192, 192);
+    
+}
+.cell:hover {
+     background-color: #e0e0e0;
+}
+button:focus{
+    outline: 2px solid #fff;
+}
+body{
+    /* dark letters in the body of the webpage  */
+    font-family: Arial , sans-serif;
+    display: flex;
+    flex-direction: column; 
+    /* make content center  */
+    align-items: center;
+    justify-content: center;
+    /* to gain a proper height:   */
+    height: 100vh;
+    /* to remove the scroll bar occuring due to default margin */
+    margin: 0;
+}
+#winning-animation{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    pointer-events: none;
+
+}
+.animation-content{
+    text-align: center;
+    font-size: 2em;
+    pointer-events: auto;
+}
+#winning-animation.hidden{
+    display: none;
+}
+h1{
+    font-style: italic;
+}
